@@ -122,12 +122,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="gameloop.h" />
-    <ClInclude Include="gameobject.h" />
+    <ClInclude Include="collider.h" />
     <ClInclude Include="gamemap.h" />
+    <ClInclude Include="gameobject.h" />
+    <ClInclude Include="program.h" />
+    <ClInclude Include="programgraphics.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="collider.cpp" />
+    <ClCompile Include="gamemap.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="program.cpp" />
+    <ClCompile Include="programgraphics.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

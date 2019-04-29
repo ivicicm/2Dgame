@@ -18,16 +18,34 @@
     <ClInclude Include="gameobject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="program.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="programgraphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="gamemap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gameloop.h">
+    <ClInclude Include="collider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="programgraphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gamemap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="collider.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
