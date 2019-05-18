@@ -22,17 +22,20 @@ public:
 		cameraY_ = 0;
 		boldFont = TTF_OpenFont("assets/theboldfont.ttf", 45);
 	}
+	// for rendering relative to camera position
 	void setCamera(int x, int y) {
 		cameraX_ = x;
 		cameraY_ = y;
 	}
-	int getCX() { return cameraX_; }
-	int getCY() { return cameraY_; }
-	int getWdith() { return width_; }
+	int getCameraX() { return cameraX_; }
+	int getCameraY() { return cameraY_; }
+	// returns screen width
+	int getWidth() { return width_; }
 	int getHeight() { return height_; }
 	SDL_Renderer* getRenderer() { return renderer_; }
 	TTF_Font* getFont() { return boldFont; }
-	//returns loaded texture on address assets/name or loads new
+	// returns stored texture or loads new from address "assets/"name
+	// inRow - how many pictures are next to eachother in the texture
 	Texture* getTexture(std::string name, int inRow = 1, SDL_Color transparent = { 255,0,0,0 });
 private:
 	SDL_Renderer* renderer_ = nullptr;

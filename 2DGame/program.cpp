@@ -14,7 +14,6 @@ Program::Program() {
 	TTF_Init();
 	window_ = SDL_CreateWindow("2DGame", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowWidth, windowHeight, SDL_WINDOW_SHOWN);
 	renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	SDL_Color color = { 255,0,0,0 };
 	textureS_.initialize(renderer_, windowWidth, windowHeight);
 	// program starts with menu screen
 	pstate_ = std::make_unique<GameMenu>(textureS_, ProgramState::ProgramStart);
@@ -23,9 +22,7 @@ Program::Program() {
 Program::~Program() {
 	TTF_CloseFont(textureS_.getFont());
 	SDL_DestroyRenderer(renderer_);
-	renderer_ = nullptr;
 	SDL_DestroyWindow(window_);
-	window_ = nullptr;	
 	IMG_Quit();
 	TTF_Quit();
 	SDL_Quit();

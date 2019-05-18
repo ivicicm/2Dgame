@@ -38,8 +38,8 @@ void Texture::render(int x, int y, int order, bool relativeToCamera,double angle
 	
 	SDL_Rect to = { x,y,width_,height_ };
 	if (relativeToCamera) {
-		to.x = to.x - textureS_.getCX();
-		to.y = to.y - textureS_.getCY();
+		to.x = to.x - textureS_.getCameraX();
+		to.y = to.y - textureS_.getCameraY();
 	}
 	SDL_Rect from = { width_*order,0,width_,height_ };
 	SDL_RenderCopyEx(textureS_.getRenderer(), texture_, &from, &to, angle, center, SDL_FLIP_NONE);
