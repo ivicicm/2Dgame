@@ -82,7 +82,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -125,12 +125,15 @@
     <ClInclude Include="collider.h" />
     <ClInclude Include="gamemap.h" />
     <ClInclude Include="gameobject.h" />
+    <ClInclude Include="staticfunctions.h" />
     <ClInclude Include="program.h" />
     <ClInclude Include="programgraphics.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="collider.cpp" />
     <ClCompile Include="gamemap.cpp" />
+    <ClCompile Include="gameobject.cpp" />
+    <ClCompile Include="staticfunctions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="program.cpp" />
     <ClCompile Include="programgraphics.cpp" />
